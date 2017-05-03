@@ -1,3 +1,25 @@
-header{
+header {
+  background-color: $blue;
 
+  .navbar{
+    margin-bottom: 0;
+
+    .navbar-header{
+      a{
+        color: $white;
+        padding: 20px 15px;
+      }
+    }
+
+    .nav{
+      a {
+        color: $white;
+        padding: 20px 15px;
+
+        &:hover {
+          background-color: $dark-blue;
+        }
+      }
+    }
+  }
 }

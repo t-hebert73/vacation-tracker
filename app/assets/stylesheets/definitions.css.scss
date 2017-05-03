@@ -1,0 +1,36 @@
+$blue: #074876;
+$dark-blue: #04395F;
+
+$green: #007F45;
+$dark-green: #004928;
+
+$brown: #202020;
+
+$yellow: #f4a33a;
+$dark-yellow: #B86800;
+
+$orange: #E14308;
+$dark-orange: #B83200;
+
+
+$white: white;
+
+@mixin btn-main() {
+  display: inline-block;
+  background-color: $yellow;
+  color: white;
+
+  &:hover{
+    background-color: $dark-yellow;
+  }
+}
+
+@mixin btn-secondary() {
+  display: inline-block;
+  background-color: $orange;
+  color: white;
+
+  &:hover{
+    background-color: $dark-orange;
+  }
+}

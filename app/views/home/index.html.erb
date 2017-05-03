@@ -1,10 +1,44 @@
-<div class="container">
+<div class="container home-page">
   <div class="col-md-12">
-    <h1>hello</h1>
 
-    <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
+    <div class="jumbotron">
+      <h1>Vacation Tracker</h1>
+
+      <p>Do you hate having to always guess how many vacation days you have for work? Sign up to this vacation tracker and have
+        all your vacation information up to date and ready for
+        viewing immediately.</p>
+
+      <p class="action-container">
+        <%= link_to('Register', new_user_registration_path, class: "btn btn-lg btn-secondary") %>
+        <span class="or">or</span>
+        <%= link_to('Sign In', new_user_session_path, class: "btn btn-lg btn-main") %></p>
+
+    </div>
+
+    <div class="marketing">
+      <div class="col-md-6">
+        <h2>Easy Tracking</h2>
+
+        <p>Input your start date, wage amount & number of hours worked per day and track your vacation days daily.</p>
+      </div>
+      <div class="col-md-6">
+        <h2>Informative Dashboard</h2>
+
+        <p>The dashboard clearly informs you on how many vacation days you have, how many you've used & dollar amounts for both.</p>
+      </div>
+      <div class="col-md-6">
+        <h2>Predictive Power</h2>
+
+        <p>See how many vacation days you will have by a chosen day for maximum efficiency & planning.</p>
+      </div>
+      <div class="col-md-6">
+        <h2>Ease Of Use</h2>
+
+        <p>All vacation tracking information can be found in the same place at the same time allowing you to fully contemplate all your vacation possibilities.</p>
+      </div>
+      <div class="clearfix"></div>
+    </div>
 
 
-    <%= link_to('Login', new_user_session_path)  %>
   </div>
 </div>

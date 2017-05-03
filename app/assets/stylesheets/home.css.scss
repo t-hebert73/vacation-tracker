@@ -1,3 +1,31 @@
 // Place all the styles related to the Home controller here.
 // They will automatically be included in application.css.scss.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.home-page{
+  .jumbotron{
+    text-align: center;
+    background-color: #2D6F9D;
+
+    h1, p{
+      color: $white;
+    }
+
+    .or{
+      margin: 5px 10px;
+    }
+
+    .action-container{
+      margin-top: 30px;
+    }
+  }
+
+  h2, p{
+    color: $white;
+  }
+
+  .marketing{
+    margin-bottom: 30px;
+  }
+}
