@@ -33,6 +33,10 @@
 
 .light-content{
   background-color: $white;
+
+  &.jumbotron{
+    text-align: center;
+  }
 }
 
 .btn.btn-main{
