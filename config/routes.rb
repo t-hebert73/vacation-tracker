@@ -10,6 +10,8 @@ Rails.application.routes.draw do
 
   get 'dashboard' => 'dashboard#index'
 
+  resources :jobs
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

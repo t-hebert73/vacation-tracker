@@ -1,0 +1,42 @@
+<div class="container">
+
+  <div class="col-md-12">
+
+    <div class="light-content jumbotron">
+
+      <h1>New Job</h1>
+
+      <p>Registering is a quick process that will allow you to use the vacation tracker.</p>
+
+      <%= form_for @job, url: {action: "create"}, html: {class: "job-form"} do |f| %>
+
+          <div class="field">
+            <%= f.label :title, "Job Title" %><br />
+            <%= f.text_field :title, autofocus: true %>
+          </div>
+
+          <div class="field">
+            <%= f.label :company, "Company" %><br />
+            <%= f.text_field :company %>
+          </div>
+
+          <div class="field">
+            <%= f.label :start_date %><br />
+            <%= f.date_field :start_date %>
+          </div>
+
+          <div class="field">
+            <%= f.label :hourly_wage %><br />
+            <%= f.text_field :hourly_wage %>
+          </div>
+
+          <div class="actions">
+            <%= f.submit "Submit Job", :class => "btn btn-main" %>
+          </div>
+      <% end %>
+
+    </div>
+
+  </div>
+
+</div>

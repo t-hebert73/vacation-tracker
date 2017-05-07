@@ -21,9 +21,12 @@
 @import "footer";
 @import "home";
 @import "forms";
+@import "tables";
+@import "dashboard";
 
 .main-wrapper{
   background-color: $brown;
+  min-height: 768px;
 
   .container{
     padding-top: 35px;
@@ -39,11 +42,24 @@
   }
 }
 
-.btn.btn-main{
+.jumbotron.colored{
+  background-color: $light-blue;
+  text-align: center;
+
+  h1, p{
+    color: white;
+  }
+
+  a{
+    color: $yellow;
+  }
+}
+
+a.btn.btn-main, input.btn.btn-main{
   @include btn-main();
 }
 
-.btn.btn-secondary{
+a.btn.btn-secondary, input.btn.btn-secondary{
   @include btn-secondary();
 }
 

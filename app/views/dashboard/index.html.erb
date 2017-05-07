@@ -1,1 +1,67 @@
-<h1>dashboard</h1>
+<div class="container dashboard-page">
+  <div class="col-md-12">
+
+    <div class="jumbotron colored">
+      <h1>Welcome <%= current_user[:first_name] %></h1>
+
+      <% if @jobs.empty? %>
+          <p>Haven't entered any jobs yet? <%= link_to "Enter in", new_job_path %> your job now!</p>
+      <% else %>
+          <p>Check out your vacation information below.</p>
+
+          <% @jobs.each do |job| %>
+
+              <div class="dashboard-info">
+
+                <h2 class="job-title"><%= job.title %> - <%= job.company %></h2>
+
+                <div class="box first vacation-days">
+                  <h2 class="box-label">
+                    Vac Days
+                  </h2>
+                  <div class="box-value">
+                    <%= job.vacation_days %>
+                  </div>
+                </div>
+
+                <div class="box vacation-amount">
+                  <h2 class="box-label">
+                    Vac Amount
+                  </h2>
+                  <div class="box-value">
+                    $<%= job.vacation_amount %>
+                  </div>
+                </div>
+
+                <div class="box vacation-days-used">
+                  <h2 class="box-label">
+                    Vac Days Used
+                  </h2>
+                  <div class="box-value">
+                    <%= job.vacation_days_used %>
+                  </div>
+                </div>
+
+                <div class="box vacation-amount-used">
+                  <h2 class="box-label">
+                    Vac Amount Used
+                  </h2>
+                  <div class="box-value">
+                    $<%= job.vacation_amount_used %>
+                  </div>
+                </div>
+
+                <div class="clearfix"></div>
+              </div>
+
+          <% end %>
+
+          <p>Have another job you want to track? <%= link_to "Add it here!", new_job_path %></p>
+
+          <p>Made a mistake or want to update your jobs? <%= link_to "Edit them here!", jobs_path %></p>
+
+      <% end %>
+
+    </div>
+  </div>
+</div>
