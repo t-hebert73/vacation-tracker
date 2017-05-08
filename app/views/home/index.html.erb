@@ -9,9 +9,16 @@
         viewing immediately.</p>
 
       <p class="action-container">
-        <%= link_to('Register', new_user_registration_path, class: "btn btn-lg btn-secondary") %>
-        <span class="or">or</span>
-        <%= link_to('Sign In', new_user_session_path, class: "btn btn-lg btn-main") %></p>
+
+        <% if user_signed_in? %>
+            <%= link_to "View Dashboard", dashboard_url, class: "btn btn-lg btn-main" %>
+        <% else %>
+            <%= link_to('Register', new_user_registration_path, class: "btn btn-lg btn-secondary") %>
+            <span class="or">or</span>
+            <%= link_to('Sign In', new_user_session_path, class: "btn btn-lg btn-main") %>
+        <% end %>
+
+      </p>
 
     </div>
 

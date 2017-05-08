@@ -1,5 +1,5 @@
 <header>
-  <nav class="navbar ">
+  <nav class="navbar">
     <div class="container">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -17,6 +17,10 @@
           <li><a href="/contact">Contact</a></li>
         </ul>
       </div><!--/.nav-collapse -->
+
+      <% if user_signed_in? %>
+          <div class="links-right"><%= link_to "Logout", destroy_user_session_path, :method => :delete, :class => 'btn btn-secondary' %></div>
+      <% end %>
     </div>
   </nav>
 </header>

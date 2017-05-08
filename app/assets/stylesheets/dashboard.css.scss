@@ -4,15 +4,44 @@
 .dashboard-page{
 
   .jumbotron{
+    position: relative;
+
+    .btn.absoluted{
+      position: absolute;
+      top: 25px;
+
+      &.new-job{
+        left: 25px;
+      }
+
+      &.edit-jobs{
+        right: 25px;
+      }
+    }
+
+    .dashboard-header{
+      margin-bottom: 40px;
+    }
 
     .dashboard-info{
       margin-top: 10px;
-      margin-bottom: 50px;
+      margin-bottom: 40px;
 
-      .job-title{
-        color: white;
+      .dashboard-info-top{
         text-align: left;
+
+        .job-title{
+          color: white;
+          display: inline-block;
+        }
+
+        .edit-btn{
+          vertical-align: super;
+          margin-left: 15px;
+        }
+
       }
+
 
       .box{
         float: left;

@@ -1,5 +1,6 @@
 header {
   background-color: $blue;
+  padding: 0;
 
   .navbar{
     margin-bottom: 0;
@@ -7,19 +8,30 @@ header {
     .navbar-header{
       a{
         color: $white;
-        padding: 20px 15px;
+        padding: 25px 15px;
+        height: auto;
       }
     }
 
-    .nav{
-      a {
-        color: $white;
-        padding: 20px 15px;
+    #navbar{
+      max-width: 80%;
+      float: left;
 
-        &:hover {
-          background-color: $dark-blue;
+      .nav{
+        a {
+          color: $white;
+          padding: 25px 15px;
+
+          &:hover, &:focus {
+            background-color: $dark-blue;
+          }
         }
       }
+    }
+
+    .links-right{
+      float: right;
+      margin-top: 17px;
     }
   }
 }

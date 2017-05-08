@@ -2,18 +2,35 @@
   <div class="col-md-12">
 
     <div class="jumbotron colored">
-      <h1>Welcome <%= current_user[:first_name] %></h1>
 
-      <% if @jobs.empty? %>
-          <p>Haven't entered any jobs yet? <%= link_to "Enter in", new_job_path %> your job now!</p>
-      <% else %>
-          <p>Check out your vacation information below.</p>
+      <%= link_to "Enter New Job", new_job_path, :class => "btn btn-lg btn-secondary absoluted new-job" %>
+
+      <%= link_to "Edit All Jobs", jobs_path, :class => "btn btn-lg btn-main absoluted edit-jobs" %>
+
+      <div class="dashboard-header">
+        <h1>Welcome <%= current_user[:first_name] %></h1>
+
+        <% if @jobs.empty? %>
+            <p>Haven't entered any jobs yet? <%= link_to "Enter in", new_job_path %> your job now!</p>
+        <% else %>
+            <p>Check out your vacation information below.</p>
+        <% end %>
+
+      </div>
+
+      <% if @jobs.any? %>
 
           <% @jobs.each do |job| %>
 
               <div class="dashboard-info">
 
-                <h2 class="job-title"><%= job.title %> - <%= job.company %></h2>
+                <div class="dashboard-info-top">
+                  <h2 class="job-title"><%= job.title %> - <%= job.company %></h2>
+
+                  <%= link_to "Edit", edit_job_path(job), :class => "btn btn-main edit-btn" %>
+
+                  <div class="clearfix"></div>
+                </div>
 
                 <div class="box first vacation-days">
                   <h2 class="box-label">
@@ -55,10 +72,6 @@
               </div>
 
           <% end %>
-
-          <p>Have another job you want to track? <%= link_to "Add it here!", new_job_path %></p>
-
-          <p>Made a mistake or want to update your jobs? <%= link_to "Edit them here!", jobs_path %></p>
 
       <% end %>
 
