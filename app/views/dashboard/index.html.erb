@@ -37,7 +37,7 @@
                     Vac Days
                   </h2>
                   <div class="box-value">
-                    <%= job.vacation_days %>
+                    <%= job.vacation_days.to_i %>
                   </div>
                 </div>
 
@@ -46,7 +46,7 @@
                     Vac Amount
                   </h2>
                   <div class="box-value">
-                    $<%= job.vacation_amount %>
+                    $<%= number_with_precision(job.vacation_amount, :precision => 2) %>
                   </div>
                 </div>
 
@@ -55,7 +55,7 @@
                     Vac Days Used
                   </h2>
                   <div class="box-value">
-                    <%= job.vacation_days_used %>
+                    <%= job.vacation_days_used.to_i %>
                   </div>
                 </div>
 
@@ -64,7 +64,7 @@
                     Vac Amount Used
                   </h2>
                   <div class="box-value">
-                    $<%= job.vacation_amount_used %>
+                    $<%= number_with_precision(job.vacation_amount_used, :precision => 2) %>
                   </div>
                 </div>
 
