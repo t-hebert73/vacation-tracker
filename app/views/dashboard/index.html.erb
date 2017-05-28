@@ -1,11 +1,11 @@
-<div class="container dashboard-page">
+<div class="container">
   <div class="col-md-12">
 
     <div class="jumbotron colored">
 
       <%= link_to "Enter New Job", new_job_path, :class => "btn btn-lg btn-secondary absoluted new-job" %>
 
-      <%= link_to "Edit All Jobs", jobs_path, :class => "btn btn-lg btn-main absoluted edit-jobs" %>
+      <%= link_to "Edit My Jobs", jobs_path, :class => "btn btn-lg btn-main absoluted edit-jobs" %>
 
       <div class="dashboard-header">
         <h1>Welcome <%= current_user[:first_name] %></h1>

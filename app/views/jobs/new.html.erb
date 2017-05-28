@@ -10,24 +10,24 @@
 
       <%= form_for @job, url: {action: "create"}, html: {class: "job-form"} do |f| %>
 
-          <div class="field">
+          <div class="field form-group">
             <%= f.label :title, "Job Title" %><br />
-            <%= f.text_field :title, autofocus: true %>
+            <%= f.text_field :title, autofocus: true, class: "form-control" %>
           </div>
 
-          <div class="field">
+          <div class="field form-group">
             <%= f.label :company, "Company" %><br />
-            <%= f.text_field :company %>
+            <%= f.text_field :company, class: "form-control" %>
           </div>
 
-          <div class="field">
+          <div class="field form-group">
             <%= f.label :start_date %><br />
-            <%= f.date_field :start_date %>
+            <%= f.date_field :start_date, class: "form-control" %>
           </div>
 
-          <div class="field">
+          <div class="field form-group">
             <%= f.label :hourly_wage %><br />
-            <%= f.text_field :hourly_wage %>
+            <%= f.text_field :hourly_wage, class: "form-control" %>
           </div>
 
           <div class="actions">

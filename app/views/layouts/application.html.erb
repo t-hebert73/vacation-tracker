@@ -10,7 +10,7 @@
 
 <%= render 'layouts/header' %>
 
-<div class="main-wrapper">
+<div class="main-wrapper <%= controller.controller_path %>-page">
   <%= yield %>
 </div>
 
